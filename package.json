@@ -1,0 +1,54 @@
+{
+  "name": "@unshopable/melter-cli",
+  "version": "0.1.0-alpha.1",
+  "description": "Melter's Command Line Interface",
+  "author": "unshopable",
+  "keywords": [
+    "cli",
+    "melter"
+  ],
+  "license": "MIT",
+  "repository": "unshopable/melter-cli",
+  "homepage": "https://github.com/unshopable/melter-cli",
+  "bugs": "https://github.com/unshopable/melter-cli/issues",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/bin",
+    "/dist",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "scripts": {
+    "build": "shx rm -rf dist && tsc -b",
+    "postpack": "shx rm -f oclif.manifest.json",
+    "prepack": "npm run build && oclif manifest && oclif readme",
+    "version": "oclif readme && git add README.md",
+    "prepublishOnly": "npm run build"
+  },
+  "bin": {
+    "melter": "./bin/run"
+  },
+  "oclif": {
+    "default": ".",
+    "commands": "./dist"
+  },
+  "peerDependencies": {
+    "@unshopable/melter": "^0.1.0-alpha.32"
+  },
+  "dependencies": {
+    "@oclif/core": "^2"
+  },
+  "devDependencies": {
+    "@types/node": "^16.18.31",
+    "oclif": "^3",
+    "prettier": "^2.8.8",
+    "shx": "^0.3.3",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.5.2",
+    "typescript": "^4.9.5"
+  }
+}
