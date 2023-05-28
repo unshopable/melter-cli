@@ -2,13 +2,22 @@
   "name": "@unshopable/melter-cli",
   "version": "0.1.0-alpha.0",
   "description": "Melter's Command Line Interface",
+  "author": "unshopable",
   "keywords": [
     "oclif"
   ],
-  "author": "unshopable",
   "license": "MIT",
+  "repository": "unshopable/melter-cli",
+  "homepage": "https://github.com/unshopable/melter-cli",
+  "bugs": "https://github.com/unshopable/melter-cli/issues",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "/bin",
+    "/dist",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
   "engines": {
     "node": ">=12.0.0"
   },
@@ -18,18 +27,9 @@
     "prepack": "npm run build && oclif manifest && oclif readme",
     "version": "oclif readme && git add README.md"
   },
-  "files": [
-    "/bin",
-    "/dist",
-    "/npm-shrinkwrap.json",
-    "/oclif.manifest.json"
-  ],
   "bin": {
     "melter": "./bin/run"
   },
-  "repository": "unshopable/melter-cli",
-  "homepage": "https://github.com/unshopable/melter-cli",
-  "bugs": "https://github.com/unshopable/melter-cli/issues",
   "oclif": {
     "default": ".",
     "commands": "./dist"
