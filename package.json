@@ -4,7 +4,8 @@
   "description": "Melter's Command Line Interface",
   "author": "unshopable",
   "keywords": [
-    "oclif"
+    "cli",
+    "melter"
   ],
   "license": "MIT",
   "repository": "unshopable/melter-cli",
